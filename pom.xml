@@ -10,7 +10,6 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<keycloak.version>26.7.3</keycloak.version>
-		<jboss.logging.version>3.6.1.Final</jboss.logging.version>
 		<outputDirectory>D:\scodidev\env\server\keycloak\providers</outputDirectory>
 	</properties>
 
@@ -63,28 +62,11 @@
 			<version>${keycloak.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>org.jboss.logging</groupId>
-			<artifactId>jboss-logging</artifactId>
-			<scope>provided</scope>
-			<version>${jboss.logging.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-services</artifactId>
 			<scope>provided</scope>
 			<version>${keycloak.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-api</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 	</dependencies>
 
